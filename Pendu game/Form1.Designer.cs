@@ -1,6 +1,6 @@
 ﻿namespace Pendu_game
 {
-    partial class Form1
+    partial class Fenetre
     {
         /// <summary>
         /// Required designer variable.
@@ -28,84 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Lettre = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btn_char = new System.Windows.Forms.Button();
+            this.mot_chercheur = new System.Windows.Forms.TextBox();
+            this.Image = new System.Windows.Forms.PictureBox();
+            this.combo_char = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.liste_char = new System.Windows.Forms.ListBox();
+            this.btn_reset = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // btn_char
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 239);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.btn_char.Location = new System.Drawing.Point(204, 24);
+            this.btn_char.Name = "btn_char";
+            this.btn_char.Size = new System.Drawing.Size(55, 23);
+            this.btn_char.TabIndex = 1;
+            this.btn_char.Text = "valider";
+            this.btn_char.UseVisualStyleBackColor = true;
+            this.btn_char.Click += new System.EventHandler(this.BoutonLettre);
             // 
-            // listView1
+            // mot_chercheur
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(245, 42);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 114);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.mot_chercheur.Location = new System.Drawing.Point(140, 150);
+            this.mot_chercheur.Name = "mot_chercheur";
+            this.mot_chercheur.Size = new System.Drawing.Size(100, 20);
+            this.mot_chercheur.TabIndex = 2;
+            this.mot_chercheur.TextChanged += new System.EventHandler(this.TexteChercheur);
             // 
-            // textBox1
+            // Image
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 257);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.Image.Location = new System.Drawing.Point(21, 12);
+            this.Image.Name = "Image";
+            this.Image.Size = new System.Drawing.Size(100, 169);
+            this.Image.TabIndex = 0;
+            this.Image.TabStop = false;
+            this.Image.Click += new System.EventHandler(this.ImagePendu);
             // 
-            // Lettre
+            // combo_char
             // 
-            this.Lettre.FormattingEnabled = true;
-            this.Lettre.Location = new System.Drawing.Point(245, 183);
-            this.Lettre.Name = "Lettre";
-            this.Lettre.Size = new System.Drawing.Size(121, 21);
-            this.Lettre.TabIndex = 9;
-            this.Lettre.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.combo_char.FormattingEnabled = true;
+            this.combo_char.Location = new System.Drawing.Point(140, 26);
+            this.combo_char.Name = "combo_char";
+            this.combo_char.Size = new System.Drawing.Size(58, 21);
+            this.combo_char.TabIndex = 3;
+            this.combo_char.SelectedIndexChanged += new System.EventHandler(this.ComboLettre);
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(263, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(164, 176);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(51, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Valider";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.BoutonMot);
             // 
-            // Form1
+            // textBox2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 301);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Lettre);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.textBox2.Location = new System.Drawing.Point(21, 201);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.TextePendu);
+            // 
+            // liste_char
+            // 
+            this.liste_char.FormattingEnabled = true;
+            this.liste_char.Location = new System.Drawing.Point(139, 53);
+            this.liste_char.Name = "liste_char";
+            this.liste_char.Size = new System.Drawing.Size(120, 69);
+            this.liste_char.TabIndex = 6;
+            this.liste_char.SelectedIndexChanged += new System.EventHandler(this.ListeChar);
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.Location = new System.Drawing.Point(33, 227);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(75, 23);
+            this.btn_reset.TabIndex = 7;
+            this.btn_reset.Text = "reset";
+            this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.BtnReset);
+            // 
+            // Fenetre
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btn_reset);
+            this.Controls.Add(this.liste_char);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.combo_char);
+            this.Controls.Add(this.mot_chercheur);
+            this.Controls.Add(this.btn_char);
+            this.Controls.Add(this.Image);
+            this.Name = "Fenetre";
+            this.Load += new System.EventHandler(this.FenetreJeu);
+            ((System.ComponentModel.ISupportInitialize)(this.Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox Lettre;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_char;
+        private System.Windows.Forms.TextBox mot_chercheur;
+        private System.Windows.Forms.PictureBox Image;
+        private System.Windows.Forms.ComboBox combo_char;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox liste_char;
+        private System.Windows.Forms.Button btn_reset;
     }
 }
 
